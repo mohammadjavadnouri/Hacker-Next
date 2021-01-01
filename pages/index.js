@@ -1,6 +1,7 @@
 const react = require("react");
 import fetch from 'isomorphic-fetch'
 import Error from 'next/error';
+import StoryList from '../components/StoryList';
 
 class Index extends react.Component {
     
@@ -29,9 +30,7 @@ class Index extends react.Component {
         return(
             <div>
                 <h1>Hacker next</h1>
-                <div>{stories.map(story =>(
-                    <h4 key={story.id}>{story.title}</h4>
-                ) )}</div>
+                <StoryList stories={stories} />
             </div>
         )
     }
