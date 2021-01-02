@@ -2,6 +2,7 @@ const react = require("react");
 import fetch from 'isomorphic-fetch'
 import Error from 'next/error';
 import StoryList from '../components/StoryList';
+import Layout from '../components/Layout';
 
 class Index extends react.Component {
     
@@ -28,10 +29,9 @@ class Index extends react.Component {
         }
 
         return(
-            <div>
-                <h1>Hacker next</h1>
-                <StoryList stories={stories} />
-            </div>
+            <Layout title="Hacker Next" description="A Hacker News Clone made with Nextjs">
+                <StoryList stories={stories}  />
+            </Layout>
         )
     }
 }

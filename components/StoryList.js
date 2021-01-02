@@ -20,7 +20,7 @@ const StoryList = ({stories}) => (
                 padding: 0 1em;
             }
             .story{
-                padding: 0 1em;
+                padding: 1em 0;
             }
             .story-title{
                 font-size: 1rem;
